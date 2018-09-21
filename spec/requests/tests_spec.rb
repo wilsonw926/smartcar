@@ -94,7 +94,6 @@ describe "routing tests" do
   it 'start engine 1234' do
     params = { "action" => "START" }
     headers = { "CONTENT_TYPE" => "application/json" }
-    expect(Gmapi).to receive(:start_stop_engine).with('1234', 'START').and_call_original
     post '/vehicle/1234/engine', params: params.to_json, headers: headers
     expect(JSON.parse(response.body)['status']).to be_in(["success", "error"])
   end
@@ -102,7 +101,6 @@ describe "routing tests" do
   it 'start engine 1235' do
     params = { "action" => "STOP" }
     headers = { "CONTENT_TYPE" => "application/json" }
-    expect(Gmapi).to receive(:start_stop_engine).with('1235', 'STOP').and_call_original
     post '/vehicle/1235/engine', params: params.to_json, headers: headers
     expect(JSON.parse(response.body)['status']).to be_in(["success", "error"])
   end
