@@ -1,24 +1,20 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Setup:
 
-Things you may want to cover:
+git clone https://github.com/wilsonw926/smartcar.git
 
-* Ruby version
+Run 'bundle install' and 'rake db:migrate'.
 
-* System dependencies
+Run 'rails s' to start server. 
 
-* Configuration
+Sample calls with given vehicles: 1234 and 1235 include...
 
-* Database creation
+http://localhost:3000/vehicle/1234/
+http://localhost:3000/vehicle/1234/fuel
+http://localhost:3000/vehicle/1234/battery
+etc.
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Link I used to learn about testing:
+http://geekhmer.github.io/blog/2014/07/30/test-routes-with-rspec-in-ruby-on-rails/
+https://github.com/rspec/rspec-rails

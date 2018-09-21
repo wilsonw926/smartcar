@@ -1,6 +1,6 @@
 class EngineController < ActionController::Base
 	def create
-	  v = Gmapi.start_stop_engine(params[:vehicle_id], params[:action])
+	  v = Gmapi.start_stop_engine(params[:vehicle_id], params[:engine][:action])
 	  if v['status'] == '200'
 	    render json: format_info(v)
 	  else
